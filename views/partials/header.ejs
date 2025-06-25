@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/logo.svg" alt="weather app logo">
+        </nav>
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <form action="/" method="post">
+                    <input type="text" id="location" name="location" placeholder="Search Location...(City name, country)">
+                    <button type="submit">
+                        <img src="images/search.svg" alt="search image">
+                    </button>
+                </form>
+                <div class="weather-det">
+                    <span>Weather Details...</span>
+                </div>
+                <div class="the-weather">
+                    <span class="current-weather"><%= content.forcast.weather_forcast %></span>
+                    
+                    <div class="temp-max weather-conditions">
+                        <div class="content">
+                            <span class="weather-type">Temp max</span>
+                            <span class="weather-value"><%= content.forcast.temp_max %> <sup>o</sup></span>
+                        </div>
+                        <div class="temp-max-image">
+                            <img src="images/tempred.svg" alt="red thermometer">
+                        </div>
+                    </div>
+                    <div class="temp-min weather-conditions">
+                        <div class="content">
+                            <span class="weather-type">Temp min</span>
+                            <span class="weather-value"><%= content.forcast.temp_min %> <sup>o</sup></span>
+                        </div>
+                        <div class="temp-min-image">
+                            <img src="images/tempblue.svg" alt="blue thermometer">
+                        </div>
+                    </div>
+                        <div class="humidity weather-conditions">
+                        <div class="content">
+                            <span class="weather-type">Humidity</span>
+                            <span class="weather-value"><%= content.forcast.humidity %>%</span>
+                        </div>
+                        <div class="humid-image weather-conditions">
+                            <img src="images/drop.svg" alt="blue thermometer">
+                        </div>
+                    </div>
+                    <div class="cloud weather-conditions">
+                        <div class="content">
+                            <span class="weather-type">Cloudy</span>
+                            <span class="weather-value"><%= content.forcast.cloudy %>%</span>
+                        </div>
+                        <div class="cloud-image">
+                            <img src="images/cloudy.svg" alt="cloud">
+                        </div>
+                    </div>
+                    
+                    <div class="wind weather-conditions">
+                        <div class="content">
+                            <span class="weather-type">Wind</span>
+                            <span class="weather-value"><%= content.forcast.wind %> km/h</span>
+                        </div>
+                        <div class="windy-image">
+                            <img src="images/wind.svg" alt="wind icon">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="weather-det">
+                        <span>Today's Weather Forecast...</span>
+                    </div>
+                    <div class="hourly-weather">
+                        <div class="time">
+                            <% (content.hourly_forcast).forEach((forcast, index)=>{ %>
+                                <div class="detailed-type">
+                                    <div class="forcast">
+                                        <div class="forcast-image">
+                                            <img src="<%= forcast.icon %>" alt="forcast image">
+                                        </div>
+                                        <div class="forcast-time">
+                                            <span><%= forcast.date %></span>
+                                            <span class="lighter"><%= forcast.weather %></span>
+                                        </div>
+                                    </div>
+                                    <div class="temp">
+                                        <span><%= forcast.temp %><sup>o</sup></span>
+                                    </div>
+                                </div>
+                            <% }) %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>

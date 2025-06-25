@@ -1,0 +1,216 @@
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: #FFFFFF;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    background-image: url('../images/bg-weather.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header{
+    display: flex;
+    gap: 739px;
+}
+
+header nav{
+    padding-top:40px;
+    padding-left: 117px;
+}
+
+header .sidebar{
+    background: rgba(255,  255, 255, 0.23);
+    width: 100%;
+    height: 100vh;
+}
+
+header .sidebar .sidebar-content{
+    background: rgba(255,  255, 255, 0.27);
+    width: 99%;
+    height: 100vh;
+    margin-left: 1%;
+    padding: 40px 0px 0px 35px;
+    overflow: scroll;
+}
+
+.sidebar form{
+    position: relative;
+    margin-bottom: 20.5px;
+}
+
+.sidebar .sidebar-content form input{
+    width: 371px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    color: white;
+    outline: none;
+}
+
+.sidebar .sidebar-content form button{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 25%;
+    left: 70%;
+}
+
+::placeholder{
+    color: white;
+    width: 305px;
+    height: 30px;
+    font-size: 16px;
+}
+
+.parent{
+    width: 50%;
+    position: absolute;
+    top: 437px;
+    bottom: 85px;
+    right: 237px;
+    left: 116px;
+    color: white;
+    display: flex;
+    gap: 10px;
+}
+
+.parent .degree{
+    font-size: 100px;
+}
+
+.parent .degree sup{
+    font-size: 50px;
+    position: relative;
+    bottom: 20%;
+}
+
+.parent .location-date{
+    align-self: center;
+    width: 227px;
+    height: 93px;
+    display: flex;
+    flex-direction: column;
+}
+
+.parent .location-date .location{
+    font-size: 60px;
+}
+
+.parent .location-date{
+    font-size: 18px;
+}
+
+.parent .weather-type{
+    width: 100px;
+    height: 100px;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .sidebar-content .weather-det{
+    margin-top: 20.5px;
+    margin-bottom: 26px;
+    text-transform: capitalize;
+}
+
+.sidebar .sidebar-content .the-weather{
+    margin-top: 26px;
+    width: 354px;
+    height: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar .sidebar-content .the-weather .current-weather{
+    text-transform: uppercase;
+
+}
+
+.sidebar .sidebar-content .the-weather .weather-conditions{
+    display: flex;
+    gap: 10px;
+}
+
+.sidebar .sidebar-content .the-weather .weather-conditions .content{
+    display: flex;
+    gap: 150.38px;
+    width: 350px;
+    height: 21px;
+}
+.sidebar .sidebar-content .the-weather .temp-max .content, 
+.sidebar .sidebar-content .the-weather .temp-min .content{
+    gap: 167px;
+}
+
+.sidebar .sidebar-content .the-weather .weather-conditions .content .weather-type{
+    width: 55%;
+    height: 21px;
+}
+
+.sidebar .sidebar-content .the-weather .weather-conditions .content .weather-value{
+    width: 45%;
+    height: 21px;
+}
+
+.sidebar .sidebar-content .the-weather .wind .content{
+    gap: 130px;
+}
+
+.sidebar .sidebar-content .the-weather .humidity .content, 
+.sidebar .sidebar-content .the-weather .cloud .content{
+    gap: 195px;
+}
+
+hr{
+    width: 371px;
+    height: 50px;
+}
+
+.sidebar .sidebar-content .hourly-weather .time{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar .sidebar-content .hourly-weather .time .detailed-type{
+    display: flex;
+    gap: 150px;
+}
+
+.sidebar .sidebar-content .hourly-weather .time .detailed-type .forcast{
+    display: flex;
+    gap: 35px;
+}
+
+.sidebar .sidebar-content .hourly-weather .time .detailed-type .forcast .forcast-time{
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .sidebar-content .hourly-weather .time .detailed-type .forcast .forcast-time .lighter{
+    opacity: 0.6;
+}
+
+.sidebar .sidebar-content .hourly-weather .time .detailed-type .forcast .forcast-image img{
+    width: 48px;
+    height: 48px;
+}
+
+.sidebar .sidebar-content .hourly-weather .time .detailed-type .temp{
+    width: 50px;
+}
+
+.sidebar .sidebar-content .hourly-weather .time .detailed-type .temp span{
+    display: inline-block;
+    width: 50px;
+}

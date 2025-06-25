@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') %>
+    <div class="parent">
+        <div class="degree">
+            <span><%= content.country.temp %><sup>o</sup></span>
+        </div>
+        <div class="location-date">
+            <span class="location">
+                <%= content.country.name %>
+            </span>
+            <span class="date"><%= content.country.date %></span>
+        </div>
+        <div class="weather-type">
+            <img src="<%= content.country.icon %>" alt="weather status">
+        </div>
+    </div>
+
+<%- include('partials/footer.ejs') %>
